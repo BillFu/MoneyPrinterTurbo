@@ -307,7 +307,8 @@ def generate_video(
         try:
             bgm_clip = AudioFileClip(bgm_file).with_effects(
                 [
-                    afx.MultiplyVolume(params.voice_volume),
+                    # afx.MultiplyVolume(params.voice_volume),
+                    afx.MultiplyVolume(params.bgm_volume),
                     afx.AudioFadeOut(3),
                     afx.AudioLoop(duration=video_clip.duration),
                 ]
